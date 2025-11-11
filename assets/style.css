@@ -560,20 +560,60 @@ ul li:before {
   box-shadow: 0 2px 4px rgba(255, 116, 65, 0.3);
 }
 
-/* Table of Contents */
+/* Compact TOC Toggle Button */
+.toc-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #ff7441 0%, #ff8c5a 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(255, 116, 65, 0.3);
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.toc-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(255, 116, 65, 0.4);
+}
+
+.toc-toggle.active {
+  background: #1f2937;
+}
+
+/* Compact TOC Panel */
 .table-of-contents {
-  position: sticky;
-  top: 100px;
-  float: right;
-  width: 280px;
-  margin-left: 3rem;
-  margin-right: -320px;
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2rem;
+  width: 320px;
+  max-height: 400px;
   padding: 1.5rem;
-  background: #fafafa;
+  background: white;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
-  max-height: calc(100vh - 150px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.table-of-contents.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .table-of-contents h4 {
@@ -611,14 +651,14 @@ ul li:before {
 }
 
 .table-of-contents a:hover {
-  background: white;
+  background: #fafafa;
   color: #ff7441;
   border-left-color: #ff7441;
   padding-left: 1rem;
 }
 
 .table-of-contents a.active {
-  background: white;
+  background: #fef3f0;
   color: #ff7441;
   font-weight: 600;
   border-left-color: #ff7441;
@@ -680,6 +720,81 @@ ul li:before {
   color: #6b7280;
   margin: 0;
   line-height: 1.6;
+}
+
+/* Social Share Buttons */
+.social-share {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.social-share-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-right: 0.5rem;
+}
+
+.social-share-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 1.125rem;
+}
+
+.share-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.share-button.twitter:hover {
+  background: #1DA1F2;
+  color: white;
+  border-color: #1DA1F2;
+}
+
+.share-button.linkedin:hover {
+  background: #0A66C2;
+  color: white;
+  border-color: #0A66C2;
+}
+
+.share-button.email:hover {
+  background: #ff7441;
+  color: white;
+  border-color: #ff7441;
+}
+
+.share-button.copy:hover {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+.share-button.copy.copied {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
 }
 
 /* Copy Code Button */
@@ -772,10 +887,24 @@ ul li:before {
   }
   
   .table-of-contents {
-    display: none;
+    width: calc(100vw - 4rem);
+    right: 2rem;
+    left: 2rem;
+    bottom: 5rem;
+  }
+  
+  .toc-toggle {
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
   
   .related-articles-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .social-share {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
 }
