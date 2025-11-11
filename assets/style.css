@@ -89,6 +89,10 @@ main.home-content {
   padding: 0;
 }
 
+main.home-content > h1:first-child {
+  display: none;
+}
+
 h1 {
   font-size: 2.75rem;
   margin-bottom: 1rem;
