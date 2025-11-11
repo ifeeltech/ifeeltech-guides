@@ -4,6 +4,19 @@
 
 Every article goes through **two distinct passes** before publication to ensure accuracy and tone quality.
 
+### 🔍 **MANDATORY: Web Search Verification**
+
+**CRITICAL REQUIREMENT:** All pricing, statistics, and technical specifications MUST be verified through web searches before publication.
+
+**Never approximate. Never guess. Always verify.**
+
+- ✅ **Pricing:** Search official vendor sites for exact current prices
+- ✅ **Statistics:** Find and verify original sources for all claims
+- ✅ **Technical specs:** Confirm specifications from manufacturer documentation
+- ✅ **Date everything:** Include "as of [Month Year]" for all time-sensitive information
+- ✅ **Multiple attempts:** If first search fails, try different queries
+- ✅ **Take the time:** Accuracy is more important than speed
+
 ---
 
 ## Phase 1: Content Creation
@@ -53,43 +66,132 @@ Every article goes through **two distinct passes** before publication to ensure 
 
 **AI performs systematic verification:**
 
-#### A. Pricing Verification
-- [ ] Check all software pricing mentioned
-- [ ] Verify against current vendor websites
-- [ ] Use price ranges instead of exact figures when possible
-- [ ] Note: "Pricing as of November 2025" if time-sensitive
-- [ ] Replace outdated prices with current ranges
+#### A. Pricing Verification (MANDATORY WEB SEARCH)
 
-**Example:**
-- ❌ "QuickBooks Online costs $456 annually"
-- ✅ "QuickBooks Online starts around $30-$200 monthly"
+**CRITICAL: Never write pricing without verification**
 
-#### B. Statistics & Claims
-- [ ] Verify all percentages and numbers
-- [ ] Check statistics against original sources
-- [ ] Ensure claims are current (not 3+ years old)
-- [ ] Link to authoritative sources for major claims
-- [ ] Note the date of research/study if relevant
+**Step-by-step process:**
+1. **Identify all pricing claims** in the article
+2. **Perform web search** for each product/service mentioned
+3. **Use specific search queries:**
+   - `[product name] official price store.[vendor].com`
+   - `[product] pricing 2025 site:[vendor].com`
+   - `[product] cost specifications [year]`
+4. **Read official vendor pages** to get exact current pricing
+5. **If first search fails,** try alternative queries or check multiple retailers
+6. **Document the date:** Always include "as of November 2025"
 
-**Example:**
-- ❌ "Studies show 80% of businesses..."
-- ✅ "A 2024 Gartner study found that 80% of businesses..."
+**Verification checklist:**
+- [ ] **Web search performed** for EVERY price mentioned
+- [ ] Exact figures obtained from official sources (not approximations)
+- [ ] Multiple sources checked if official site unavailable
+- [ ] Date included: "as of November 2025"
+- [ ] Price ranges used only when prices genuinely vary by configuration
 
-#### C. Technical Accuracy
-- [ ] Verify technical processes and procedures
-- [ ] Confirm compatibility and integration details
-- [ ] Check that recommendations are still valid
-- [ ] Verify feature availability in current versions
-- [ ] Test all links to ensure they work
+**Examples:**
 
-#### D. Integration & Feature Counts
-- [ ] Avoid specific numbers that change frequently
-- [ ] Use "extensive," "hundreds," "many" instead of exact counts
-- [ ] Focus on capabilities rather than counts
+❌ **WRONG - Approximation:**
+- "QuickBooks Online costs around $400 annually"
+- "The UNVR is approximately $300"
 
-**Example:**
-- ❌ "QuickBooks has 650+ integrations"
-- ✅ "QuickBooks maintains an extensive integration ecosystem"
+✅ **CORRECT - Verified exact pricing:**
+- "QuickBooks Online Simple Start costs $30/month ($360 annually as of November 2025)"
+- "The UNVR costs $299 (as of November 2025, from store.ui.com)"
+
+✅ **CORRECT - Verified range when appropriate:**
+- "QuickBooks Online plans range from $30-$200 monthly depending on features (as of November 2025)"
+
+#### B. Statistics & Claims (MANDATORY WEB SEARCH)
+
+**CRITICAL: Never cite statistics without verification**
+
+**Step-by-step process:**
+1. **Identify all statistics** and claims in the article
+2. **Perform web search** for each statistic
+3. **Use specific search queries:**
+   - `[statistic] [organization name] study 2024 2025`
+   - `[percentage] [topic] research report`
+   - `[claim] source site:[authoritative-domain].com`
+4. **Find original source** - Don't cite secondary sources
+5. **Verify the date** of the study/research
+6. **If source is 3+ years old,** either find newer data or note the age
+
+**Verification checklist:**
+- [ ] **Web search performed** for EVERY statistic
+- [ ] Original source identified and verified
+- [ ] Study date confirmed and included
+- [ ] Link to authoritative source added
+- [ ] Old statistics (3+ years) either updated or contextualized
+
+**Examples:**
+
+❌ **WRONG - Unverified claim:**
+- "Studies show 80% of businesses experience data breaches"
+- "Most companies use MFA"
+
+✅ **CORRECT - Verified with source:**
+- "Microsoft's 2023 research shows that MFA blocks 99.9% of automated credential-based attacks"
+- "The FBI's Internet Crime Complaint Center reported losses exceeding $68 million from SIM swapping in 2021"
+
+✅ **CORRECT - Noting age of data:**
+- "While 2021 FBI data showed $68 million in losses, SIM swapping attacks have continued to increase"
+
+#### C. Technical Accuracy (MANDATORY WEB SEARCH)
+
+**CRITICAL: Verify all technical specifications**
+
+**Step-by-step process:**
+1. **Identify all technical specs** (camera counts, storage, RAID, etc.)
+2. **Perform web search** for official documentation
+3. **Use specific search queries:**
+   - `[product] technical specifications site:[manufacturer].com`
+   - `[product] datasheet official`
+   - `[product] [spec] compatibility 2025`
+4. **Read official tech specs** or documentation
+5. **Verify current features** - Don't assume old info is still accurate
+6. **Test ALL links** mentioned in the article
+
+**Verification checklist:**
+- [ ] **Web search performed** for technical specifications
+- [ ] Official documentation found and verified
+- [ ] Camera counts, storage capacities verified from manufacturer
+- [ ] RAID configurations confirmed accurate
+- [ ] Compatibility details checked
+- [ ] All links tested and working
+
+**Examples:**
+
+❌ **WRONG - Unverified specs:**
+- "The UNVR supports up to 20 cameras"
+- "It has 5 drive bays"
+
+✅ **CORRECT - Verified from official source:**
+- "The UNVR supports up to 18 4K cameras or 60 Full HD cameras (per Ubiquiti official specs)"
+- "The UNVR has 4 drive bays, while the UNVR Pro has 7 drive bays"
+
+#### D. Integration & Feature Counts (USE WITH CAUTION)
+
+**Problem:** Integration counts change frequently and are hard to verify
+
+**Best practices:**
+- [ ] **Avoid specific counts** unless recently verified: "650+ integrations"
+- [ ] Use descriptive terms: "extensive," "hundreds," "robust ecosystem"
+- [ ] Focus on capabilities rather than exact numbers
+- [ ] If using counts, add date: "over 600 integrations as of November 2025"
+- [ ] **Perform web search** if specific count is critical to the article
+
+**Examples:**
+
+❌ **WRONG - Outdated specific count:**
+- "QuickBooks has 650+ integrations"
+- "Xero connects to 1,000 apps"
+
+✅ **CORRECT - Descriptive without specific count:**
+- "QuickBooks maintains an extensive integration ecosystem with hundreds of applications"
+- "Xero offers robust third-party integrations covering most business needs"
+
+✅ **ACCEPTABLE - If recently verified:**
+- "QuickBooks Online lists over 650 integrations in its app marketplace (as of November 2025)"
 
 ---
 
