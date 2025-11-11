@@ -4,6 +4,13 @@
 
 As an expert content strategist and LinkedIn marketing specialist, create comprehensive supporting articles that reinforce and link back to pillar page content. Writing should reflect the measured, informative style found in established tech publications like **Wired** and **PC World**, prioritizing clarity and factual presentation over promotional language.
 
+**Core Principles:**
+- **Never use sensational or dramatic language** - Avoid hype, exaggeration, or fear-mongering
+- **Focus on being genuinely helpful** - Provide actionable insights users can implement
+- **Add real value** - Don't just restate common knowledge; offer depth and nuance
+- **Fulfill search intent** - Answer the question the user is actually asking
+- **Maintain accuracy** - Every claim, specification, and price must be verified
+
 ---
 
 ## Content Requirements
@@ -58,14 +65,62 @@ After completing each section, verify:
 - Links are contextually relevant and valuable
 - Content adds genuine value beyond the pillar page
 
-### 5. Final Validation
+### 5. Fact-Checking & Accuracy Verification
+
+**CRITICAL STEP:** Before finalizing, verify every factual claim:
+
+**Pricing & Specifications:**
+- ✅ Check all software pricing against current vendor websites
+- ✅ Verify feature availability and plan limitations
+- ✅ Confirm technical specifications and system requirements
+- ✅ Note the date of pricing verification (e.g., "as of November 2025")
+
+**Statistics & Claims:**
+- ✅ Verify all statistics with original sources
+- ✅ Check that percentages and numbers are accurate
+- ✅ Ensure claims are current and not outdated
+- ✅ Link to authoritative sources for major claims
+
+**Technical Accuracy:**
+- ✅ Verify technical processes and procedures
+- ✅ Confirm compatibility and integration details
+- ✅ Check that recommendations are still valid
+- ✅ Test any links to ensure they're not broken
+
+### 6. Tone & Language Review
+
+**SECOND PASS:** Review the entire article for tone issues:
+
+**Avoid Sensational Language:**
+- ❌ "Revolutionary," "game-changing," "shocking," "unbelievable"
+- ❌ "You MUST do this," "Never do that," "Always use this"
+- ❌ Fear-mongering: "Your business will fail if..."
+- ❌ Hype: "The ultimate solution," "The only way"
+- ✅ Instead: "Effective," "practical," "recommended," "worth considering"
+
+**Maintain Helpful Tone:**
+- ✅ Use "you can," "consider," "may want to," "often works well"
+- ✅ Present options rather than mandates
+- ✅ Acknowledge trade-offs and limitations
+- ✅ Respect reader intelligence and decision-making ability
+
+**Check for Value:**
+- ✅ Does each section provide actionable information?
+- ✅ Are we answering the actual question users are asking?
+- ✅ Have we gone beyond surface-level advice?
+- ✅ Would a knowledgeable reader find this useful?
+
+### 7. Final Validation
 
 Confirm the completed article meets all requirements:
 
 - ✅ Achieves target word count (~1,000 words)
 - ✅ Includes required internal (1-3) and external (1) links
 - ✅ Maintains journalistic tone throughout
-- ✅ Provides actionable insights for LinkedIn readers
+- ✅ Provides actionable insights for readers
+- ✅ All facts, prices, and specifications verified
+- ✅ No sensational or dramatic language
+- ✅ Genuinely helpful and fulfills search intent
 
 ---
 
@@ -85,6 +140,10 @@ Confirm the completed article meets all requirements:
 - Make unsupported claims
 - Use excessive exclamation points or hype
 - Oversimplify complex topics
+- Use sensational headlines or dramatic language
+- Create false urgency or fear
+- Make absolute statements without nuance
+- Ignore trade-offs or limitations
 
 ---
 
@@ -152,6 +211,7 @@ image_credit: "Unsplash"
 
 Before publishing, verify:
 
+**Content Quality:**
 - [ ] Word count: 900-1,100 words
 - [ ] Tone: Journalistic and professional throughout
 - [ ] Internal links: 1-3 contextual links to pillar page
@@ -159,10 +219,33 @@ Before publishing, verify:
 - [ ] Subheadings: Clear and descriptive (3-4 main sections)
 - [ ] Paragraphs: Focused and purposeful (3-5 sentences each)
 - [ ] Technical terms: Explained clearly for business audience
-- [ ] Data/claims: Supported by credible sources
 - [ ] CTA: Subtle and value-focused
-- [ ] SEO: Title, description, and tags optimized
 - [ ] Brand voice: Matches iFeeltech's expertise and helpfulness
+
+**Accuracy & Fact-Checking:**
+- [ ] All pricing verified against current vendor websites
+- [ ] All statistics verified with original sources
+- [ ] Technical specifications confirmed accurate
+- [ ] Date of verification noted for time-sensitive information
+- [ ] All links tested and working
+- [ ] Claims supported by credible sources
+
+**Tone & Language:**
+- [ ] No sensational or dramatic language
+- [ ] No fear-mongering or false urgency
+- [ ] No absolute statements without nuance
+- [ ] Options presented, not mandates
+- [ ] Trade-offs and limitations acknowledged
+- [ ] Genuinely helpful and actionable
+- [ ] Fulfills actual search intent
+
+**SEO & Technical:**
+- [ ] Title optimized (50-60 characters)
+- [ ] Description optimized (150-160 characters)
+- [ ] Tags relevant and consistent
+- [ ] Featured image (1200x600px) from Unsplash
+- [ ] Image credit included
+- [ ] Proper frontmatter formatting
 
 ---
 
@@ -176,8 +259,14 @@ Before publishing, verify:
 3. Present options to user
 4. User selects preferred topic
 5. AI writes complete 1,000-word article following these guidelines
-6. AI saves to `_posts/YYYY-MM-DD-slug.md`
-7. User reviews and publishes
+6. **AI performs fact-checking pass** - Verify all claims, pricing, specifications
+7. **AI performs tone review pass** - Check for sensational language, ensure helpfulness
+8. AI saves to `_posts/YYYY-MM-DD-slug.md`
+9. User reviews and publishes
+
+**Two-Pass Quality System:**
+- **First Pass:** Write comprehensive, helpful content
+- **Second Pass:** Verify accuracy and tone before finalizing
 
 ---
 
