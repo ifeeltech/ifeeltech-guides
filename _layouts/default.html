@@ -63,6 +63,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" id="reading-progress"></div>
+  
   <header>
     <div class="header-container">
       <nav>
@@ -100,10 +103,32 @@
       </div>
       {% endif %}
       
+      <!-- Table of Contents (will be populated by JavaScript) -->
+      <aside class="table-of-contents" id="table-of-contents">
+        <h4>On This Page</h4>
+        <ul id="toc-list"></ul>
+      </aside>
+      
       <div class="article-content">
         {{ content }}
       </div>
     </article>
+    
+    <!-- Related Articles -->
+    {% if page.layout == 'default' and page.date %}
+    <aside class="related-articles">
+      <h3>Related Articles</h3>
+      <div class="related-articles-grid">
+        {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" | sample: 3 %}
+        {% for post in related_posts limit:3 %}
+        <div class="related-article-card">
+          <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+          <p>{{ post.description | truncate: 100 }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </aside>
+    {% endif %}
     
     {% if page.layout == 'default' and page.date %}
     <aside class="related-cta">
@@ -120,5 +145,98 @@
       <p class="footer-tagline">Practical IT solutions for growing businesses</p>
     </div>
   </footer>
+  
+  <script>
+    // Reading Progress Bar
+    function updateReadingProgress() {
+      const progressBar = document.getElementById('reading-progress');
+      if (!progressBar) return;
+      
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight - windowHeight;
+      const scrolled = window.scrollY;
+      const progress = (scrolled / documentHeight) * 100;
+      
+      progressBar.style.width = progress + '%';
+    }
+    
+    // Table of Contents Generation
+    function generateTableOfContents() {
+      const toc = document.getElementById('table-of-contents');
+      const tocList = document.getElementById('toc-list');
+      const articleContent = document.querySelector('.article-content');
+      
+      if (!toc || !tocList || !articleContent) return;
+      
+      const headings = articleContent.querySelectorAll('h2, h3');
+      
+      if (headings.length === 0) {
+        toc.style.display = 'none';
+        return;
+      }
+      
+      headings.forEach((heading, index) => {
+        // Add ID to heading if it doesn't have one
+        if (!heading.id) {
+          heading.id = 'heading-' + index;
+        }
+        
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#' + heading.id;
+        a.textContent = heading.textContent;
+        a.style.paddingLeft = heading.tagName === 'H3' ? '1.5rem' : '0.75rem';
+        
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.pushState(null, null, '#' + heading.id);
+        });
+        
+        li.appendChild(a);
+        tocList.appendChild(li);
+      });
+    }
+    
+    // Highlight active TOC item on scroll
+    function highlightActiveTocItem() {
+      const headings = document.querySelectorAll('.article-content h2, .article-content h3');
+      const tocLinks = document.querySelectorAll('.table-of-contents a');
+      
+      if (headings.length === 0 || tocLinks.length === 0) return;
+      
+      let currentActive = null;
+      
+      headings.forEach((heading) => {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top <= 150 && rect.top >= -50) {
+          currentActive = heading.id;
+        }
+      });
+      
+      tocLinks.forEach((link) => {
+        link.classList.remove('active');
+        if (currentActive && link.getAttribute('href') === '#' + currentActive) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      generateTableOfContents();
+      updateReadingProgress();
+      highlightActiveTocItem();
+    });
+    
+    // Update on scroll
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+      updateReadingProgress();
+      
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(highlightActiveTocItem, 50);
+    });
+  </script>
 </body>
 </html>
