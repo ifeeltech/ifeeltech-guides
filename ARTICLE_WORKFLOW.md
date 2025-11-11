@@ -51,10 +51,13 @@ Every article goes through **two distinct passes** before publication to ensure 
 - Follow CONTENT_GUIDELINES.md structure
 - Include 1-3 internal links to pillar
 - Add 1 external authority link
-- Use tables, lists, blockquotes for formatting
+- **REQUIRED:** Include at least ONE table (comparison, features, specs, etc.)
+- **REQUIRED:** Include at least ONE bullet list section (steps, criteria, tips)
+- Use blockquotes for key insights
+- Vary formatting: No more than 3-4 paragraphs without visual break
 - Select relevant Unsplash featured image
 
-**Focus:** Content quality, structure, helpfulness
+**Focus:** Content quality, structure, helpfulness, scannability
 
 **DO NOT finalize yet** - this is draft only
 

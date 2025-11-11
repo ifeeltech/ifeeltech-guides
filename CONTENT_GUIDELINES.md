@@ -24,8 +24,9 @@ As an expert content strategist and LinkedIn marketing specialist, create compre
 | **Internal Links** | 1-3 contextual links back to the original pillar page |
 | **External Links** | One link to a high-authority external source (NIST, CISA, Gartner, etc.) |
 | **Featured Image** | Relevant Unsplash image (1200x600px recommended) |
-| **Formatting** | Use tables, bullet points, and blockquotes for visual variety |
-| **Style** | Professional, informative, and accessible to LinkedIn's business audience |
+| **Formatting** | **REQUIRED:** At least one table AND one bullet list section for scannability |
+| **Visual Variety** | Mix paragraphs, lists, tables, and blockquotes - avoid long text blocks |
+| **Style** | Professional, informative, and accessible to business audience |
 
 ---
 
@@ -57,6 +58,24 @@ Write the article in sections, ensuring:
 - Information flows logically between sections
 - Technical concepts are explained clearly
 - Industry insights are supported by credible sources
+
+**MANDATORY FORMATTING REQUIREMENTS:**
+
+**Must Include At Least One Table:**
+- Use tables for comparisons, feature lists, or cost breakdowns
+- Tables make complex information scannable
+- Example uses: pricing comparison, feature matrix, pros/cons, specifications
+
+**Must Include At Least One Bullet List Section:**
+- Use bullet lists for steps, criteria, recommendations, or key points
+- Break up long paragraphs with lists
+- Example uses: implementation steps, warning signs, decision criteria, best practices
+
+**Visual Variety Guidelines:**
+- No more than 3-4 paragraphs in a row without visual break
+- Mix: paragraphs → bullet list → paragraphs → table → paragraphs
+- Use blockquotes for key insights or important takeaways
+- Vary section lengths to maintain reader engagement
 
 ### 4. Review and Refinement
 
@@ -213,8 +232,25 @@ image_credit: "Unsplash"
 ## [Main Section 1]
 [Develop the first key point with supporting evidence and examples.]
 
+**REQUIRED: Include a bullet list section like this:**
+
+Key considerations include:
+- **First point** - Brief explanation
+- **Second point** - Brief explanation  
+- **Third point** - Brief explanation
+- **Fourth point** - Brief explanation
+
 ## [Main Section 2]
 [Expand on related concepts with practical insights.]
+
+**REQUIRED: Include a comparison table like this:**
+
+| Feature | Option A | Option B |
+|---------|----------|----------|
+| **Pricing** | $X/month | $Y/month |
+| **Best For** | Small teams | Large orgs |
+| **Key Benefit** | Easy setup | Advanced features |
+| **Limitation** | Basic features | Complex setup |
 
 ## [Main Section 3]
 [Address implementation or real-world applications.]
@@ -242,6 +278,9 @@ Before publishing, verify:
 - [ ] External link: 1 high-authority source
 - [ ] Subheadings: Clear and descriptive (3-4 main sections)
 - [ ] Paragraphs: Focused and purposeful (3-5 sentences each)
+- [ ] **At least ONE table included** (comparison, features, pricing, etc.)
+- [ ] **At least ONE bullet list section** (steps, criteria, recommendations)
+- [ ] Visual variety: No more than 3-4 paragraphs without formatting break
 - [ ] Technical terms: Explained clearly for business audience
 - [ ] CTA: Subtle and value-focused
 - [ ] Brand voice: Matches iFeeltech's expertise and helpfulness
