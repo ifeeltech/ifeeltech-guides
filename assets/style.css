@@ -281,6 +281,41 @@ footer {
   margin: -2rem -1.5rem 3rem;
   border-radius: 0;
   overflow: hidden;
+  position: relative;
+}
+
+.featured-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 116, 65, 0.15) 0%,
+    rgba(255, 140, 90, 0.08) 50%,
+    rgba(31, 41, 55, 0.12) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.featured-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
 }
 
 .featured-image img {
@@ -288,6 +323,7 @@ footer {
   height: 400px;
   object-fit: cover;
   display: block;
+  filter: contrast(1.05) saturate(1.1);
 }
 
 .image-credit {
