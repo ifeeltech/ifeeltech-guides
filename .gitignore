@@ -34,3 +34,8 @@ ENV/
 # Environment variables
 .env
 .env.local
+
+# Bundler
+vendor/
+.bundle/
+Gemfile.lock
