@@ -1,7 +1,7 @@
 title: "iFeeltech Guides"
 description: "Supporting IT guides, setup tutorials, and product insights that link back to iFeeltech.com"
 baseurl: "/ifeeltech-guides"
-url: "https://<my-username>.github.io"
+url: "https://ifeeltech.github.io"
 permalink: /:categories/:title/
 markdown: kramdown
 
