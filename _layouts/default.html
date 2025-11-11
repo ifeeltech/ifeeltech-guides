@@ -6,6 +6,13 @@
   
   {% seo %}
   
+  <!-- Search Engine Verification (Add your verification codes here) -->
+  <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE"> -->
+  <!-- <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE"> -->
+  
+  <!-- RSS Feed Auto-Discovery -->
+  {% feed_meta %}
+  
   {% if page.canonical_url %}
   <link rel="canonical" href="{{ page.canonical_url }}">
   {% endif %}
@@ -196,6 +203,13 @@
   <footer>
     <div class="footer-container">
       <p>© {{ "now" | date: "%Y" }} iFeeltech — <a href="https://ifeeltech.com">ifeeltech.com</a></p>
+      <p class="footer-links">
+        <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a> • 
+        <a href="{{ '/privacy/' | relative_url }}">Privacy</a> • 
+        <a href="{{ '/terms/' | relative_url }}">Terms</a> • 
+        <a href="{{ '/affiliate-disclosure/' | relative_url }}">Affiliate Disclosure</a> • 
+        <a href="{{ '/feed.xml' | relative_url }}" title="Subscribe to RSS Feed">RSS</a>
+      </p>
       <p class="footer-tagline">Practical IT solutions for growing businesses</p>
     </div>
   </footer>

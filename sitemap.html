@@ -1,0 +1,154 @@
+---
+layout: default
+title: "Sitemap - iFeeltech Guides"
+description: "Browse all articles and guides on iFeeltech Guides. Find IT tutorials, setup guides, and product insights for small business."
+permalink: /sitemap/
+---
+
+<div class="sitemap-page">
+  <h1>Sitemap</h1>
+  <p class="sitemap-intro">Browse all articles and guides organized by publication date.</p>
+
+  <section class="sitemap-section">
+    <h2>Recent Articles</h2>
+    <ul class="sitemap-list">
+      {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+      {% for post in sorted_posts %}
+      <li class="sitemap-item">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="sitemap-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        {% if post.description %}
+        <p class="sitemap-description">{{ post.description }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="sitemap-section">
+    <h2>Pages</h2>
+    <ul class="sitemap-list">
+      <li class="sitemap-item">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <p class="sitemap-description">Latest IT guides and tutorials</p>
+      </li>
+      <li class="sitemap-item">
+        <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
+        <p class="sitemap-description">How we handle your information</p>
+      </li>
+      <li class="sitemap-item">
+        <a href="{{ '/affiliate-disclosure/' | relative_url }}">Affiliate Disclosure</a>
+        <p class="sitemap-description">Information about affiliate links</p>
+      </li>
+      <li class="sitemap-item">
+        <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a>
+        <p class="sitemap-description">Browse all content</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="sitemap-section">
+    <h2>Subscribe</h2>
+    <ul class="sitemap-list">
+      <li class="sitemap-item">
+        <a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a>
+        <p class="sitemap-description">Subscribe to updates via RSS</p>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<style>
+.sitemap-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.sitemap-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.sitemap-intro {
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.sitemap-section {
+  margin-bottom: 3rem;
+}
+
+.sitemap-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #ff7441;
+  padding-bottom: 0.5rem;
+}
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sitemap-item:last-child {
+  border-bottom: none;
+}
+
+.sitemap-item a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ff7441;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sitemap-item a:hover {
+  color: #e65a2b;
+  text-decoration: underline;
+}
+
+.sitemap-date {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.sitemap-description {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .sitemap-page h1 {
+    font-size: 2rem;
+  }
+  
+  .sitemap-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .sitemap-item a {
+    font-size: 1.125rem;
+  }
+  
+  .sitemap-date {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+}
+</style>

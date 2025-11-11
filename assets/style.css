@@ -422,6 +422,21 @@ footer a {
   font-weight: 500;
 }
 
+.footer-links {
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+}
+
+.footer-links a {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ff7441;
+}
+
 .footer-tagline {
   margin-top: 0.5rem;
   font-size: 0.85rem;

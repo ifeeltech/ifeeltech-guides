@@ -94,6 +94,36 @@ Your content here...
 
 4. Your site will be live at: `https://your-username.github.io/ifeeltech-guides/`
 
+## 📝 Publishing Workflow
+
+1. Follow `ARTICLE_WORKFLOW.md` to create content
+2. Save articles to `_posts/YYYY-MM-DD-title.md`
+3. Commit and push to GitHub
+4. Site automatically deploys via GitHub Pages (1-2 minutes)
+5. Visit https://ifeeltech.github.io/ifeeltech-guides/
+6. Run `./ping-search-engines.sh` to notify search engines
+7. Submit to Google Search Console for faster indexing
+
+## RSS Feed
+
+**Feed URL:** `https://ifeeltech.github.io/ifeeltech-guides/feed.xml`
+
+- Auto-generated with full article content
+- Includes featured images and metadata
+- Test with: `./test-rss-feed.sh`
+- See `RSS_SUBMISSION_GUIDE.md` for submission instructions
+
+## Legal Pages
+
+All required legal pages are included:
+
+- **HTML Sitemap** (`/sitemap/`) - Auto-updates with new content
+- **Privacy Policy** (`/privacy/`) - No data collection disclosure
+- **Terms of Use** (`/terms/`) - Usage terms and disclaimers
+- **Affiliate Disclosure** (`/affiliate-disclosure/`) - FTC-compliant disclosure
+
+See `LEGAL_PAGES_GUIDE.md` for maintenance instructions.
+
 ## 📝 SEO Features
 
 - Meta title and description tags

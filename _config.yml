@@ -24,6 +24,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# RSS Feed Settings
+feed:
+  posts_limit: 20
+  excerpt_only: false
+  categories:
+    - guides
+    - tutorials
+
 # Exclude from processing
 exclude:
   - README.md
