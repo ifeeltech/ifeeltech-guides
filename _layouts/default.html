@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | iFeeltech Guides</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  {% if page.canonical_url %}
+  <link rel="canonical" href="{{ page.canonical_url }}">
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ '/' | relative_url }}" class="logo">iFeeltech Guides</a>
+    </nav>
+  </header>
+  
+  <main class="content">
+    <article>
+      <h1>{{ page.title }}</h1>
+      {% if page.date %}
+      <p class="meta">
+        <em>{{ page.date | date: "%B %d, %Y" }}</em>
+        {% if page.tags %}
+        <span class="tags">
+          {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </p>
+      {% endif %}
+      {{ content }}
+    </article>
+  </main>
+  
+  <footer>
+    <p>© {{ "now" | date: "%Y" }} iFeeltech — <a href="https://ifeeltech.com">ifeeltech.com</a></p>
+  </footer>
+</body>
+</html>

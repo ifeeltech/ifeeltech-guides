@@ -1,0 +1,25 @@
+title: "iFeeltech Guides"
+description: "Supporting IT guides, setup tutorials, and product insights that link back to iFeeltech.com"
+baseurl: "/ifeeltech-guides"
+url: "https://<my-username>.github.io"
+permalink: /:categories/:title/
+markdown: kramdown
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:title/

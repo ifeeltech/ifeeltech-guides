@@ -1,0 +1,171 @@
+/* iFeeltech Guides - Minimal Styling */
+
+/* Brand Colors:
+   - Orange: #ff7441 (links, CTAs)
+   - Light gray: #f9f9f9 (content boxes)
+   - Text: #2c3e50
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #2c3e50;
+  background: #fff;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+header {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0 1rem;
+  border-bottom: 2px solid #f9f9f9;
+}
+
+header nav .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+header nav .logo:hover {
+  color: #ff7441;
+}
+
+main.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.meta {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.tags {
+  margin-left: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #f9f9f9;
+  color: #2c3e50;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  margin-left: 0.3rem;
+}
+
+a {
+  color: #ff7441;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #e66335;
+}
+
+ul, ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+blockquote, .box {
+  background: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #ff7441;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  background: #f9f9f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: "Monaco", "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+footer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  color: #777;
+  border-top: 2px solid #f9f9f9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+}
