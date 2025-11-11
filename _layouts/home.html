@@ -3,8 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Professional IT Guides</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  
+  {% seo %}
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title }} | Professional IT Guides">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta property="twitter:title" content="{{ page.title }} | Professional IT Guides">
+  <meta property="twitter:description" content="{{ page.description | default: site.description }}">
+  
+  <!-- Schema.org markup for homepage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "iFeeltech Guides",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "iFeeltech",
+      "url": "https://ifeeltech.com"
+    }
+  }
+  </script>
+  
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

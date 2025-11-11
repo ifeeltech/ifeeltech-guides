@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ifeeltech.github.io/ifeeltech-guides/sitemap.xml
+
+# Disallow admin and system files
+Disallow: /assets/
+Disallow: /.git/
+Disallow: /vendor/

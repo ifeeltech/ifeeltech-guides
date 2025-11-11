@@ -5,10 +5,24 @@ url: "https://ifeeltech.github.io"
 permalink: /:categories/:title/
 markdown: kramdown
 
+# SEO Settings
+author:
+  name: "iFeeltech"
+  url: "https://ifeeltech.com"
+twitter:
+  username: ifeeltech
+  card: summary_large_image
+logo: /assets/logo.png
+social:
+  name: iFeeltech
+  links:
+    - https://ifeeltech.com
+
 # Build settings
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing
 exclude:

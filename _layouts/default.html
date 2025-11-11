@@ -3,11 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | iFeeltech Guides</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  
+  {% seo %}
+  
   {% if page.canonical_url %}
   <link rel="canonical" href="{{ page.canonical_url }}">
   {% endif %}
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title }} | iFeeltech Guides">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  {% if page.featured_image %}
+  <meta property="og:image" content="{{ page.featured_image }}">
+  {% endif %}
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta property="twitter:title" content="{{ page.title }} | iFeeltech Guides">
+  <meta property="twitter:description" content="{{ page.description | default: site.description }}">
+  {% if page.featured_image %}
+  <meta property="twitter:image" content="{{ page.featured_image }}">
+  {% endif %}
+  
+  <!-- Schema.org markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description | default: site.description }}",
+    "author": {
+      "@type": "Organization",
+      "name": "iFeeltech",
+      "url": "https://ifeeltech.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "iFeeltech",
+      "url": "https://ifeeltech.com"
+    },
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}",
+    {% if page.featured_image %}
+    "image": "{{ page.featured_image }}",
+    {% endif %}
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
+  }
+  </script>
+  
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
