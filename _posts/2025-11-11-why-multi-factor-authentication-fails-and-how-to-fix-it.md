@@ -10,7 +10,7 @@ image_credit: "Unsplash"
 
 ## The Promise vs. The Reality
 
-Multi-factor authentication has become the cornerstone recommendation in cybersecurity guidance, and for good reason. Microsoft's research shows that MFA blocks approximately 99.9% of automated credential-based attacks. Yet despite this compelling statistic, many small businesses struggle to implement it effectively—or abandon the effort entirely after initial rollout attempts fail.
+Multi-factor authentication has become the cornerstone recommendation in cybersecurity guidance, and for good reason. Microsoft's research shows that MFA blocks over 99% of automated credential-based attacks. Yet despite this compelling statistic, many small businesses struggle to implement it effectively—or abandon the effort entirely after initial rollout attempts fail.
 
 The gap between MFA's theoretical protection and its practical deployment reveals a familiar pattern in business technology: a solution that works brilliantly in controlled environments often encounters friction when it meets real-world workflows, legacy systems, and human behavior. Understanding why MFA implementations fail—and how to address those failure points—can mean the difference between genuine security improvement and security theater.
 
