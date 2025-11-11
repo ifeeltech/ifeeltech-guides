@@ -4,6 +4,8 @@ title: "Why Multi-Factor Authentication Fails (And How to Fix It)"
 description: "MFA stops 99% of attacks, but implementation challenges undermine adoption. Learn how to overcome user resistance, legacy system limitations, and SMS vulnerabilities."
 date: 2025-11-11
 tags: [mfa, authentication, cybersecurity, small-business]
+featured_image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=1200&h=600&fit=crop"
+image_credit: "Unsplash"
 ---
 
 ## The Promise vs. The Reality
@@ -44,7 +46,7 @@ Despite these limitations, SMS-based MFA remains significantly better than no MF
 
 ## Phishing-Resistant Authentication
 
-The National Institute of Standards and Technology (NIST) and the Cybersecurity and Infrastructure Security Agency (CISA) have both emphasized the importance of phishing-resistant MFA, particularly for privileged accounts. These methods include hardware security keys, platform authenticators like Windows Hello or Touch ID, and passkey implementations based on the FIDO2 standard.
+The [National Institute of Standards and Technology (NIST)](https://www.nist.gov/itl/applied-cybersecurity/tig/back-basics-multi-factor-authentication) and the Cybersecurity and Infrastructure Security Agency (CISA) have both emphasized the importance of phishing-resistant MFA, particularly for privileged accounts. These methods include hardware security keys, platform authenticators like Windows Hello or Touch ID, and passkey implementations based on the FIDO2 standard.
 
 Phishing-resistant authentication works by using cryptographic proof rather than codes that can be intercepted or tricked out of users. When a user authenticates with a hardware key, the key generates a unique cryptographic signature that proves possession of the physical device. This signature is tied to the specific website or application, making it impossible for attackers to use even if they intercept it. Fake login pages can't capture anything useful because the authentication happens between the legitimate service and the physical key.
 

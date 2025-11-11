@@ -13,7 +13,9 @@ As an expert content strategist and LinkedIn marketing specialist, create compre
 | **Length** | Approximately 1,000 words |
 | **Tone** | Calm, helpful, and journalistic |
 | **Internal Links** | 1-3 contextual links back to the original pillar page |
-| **External Links** | One link to a high-authority external source |
+| **External Links** | One link to a high-authority external source (NIST, CISA, Gartner, etc.) |
+| **Featured Image** | Relevant Unsplash image (1200x600px recommended) |
+| **Formatting** | Use tables, bullet points, and blockquotes for visual variety |
 | **Style** | Professional, informative, and accessible to LinkedIn's business audience |
 
 ---
@@ -118,6 +120,8 @@ title: "[Descriptive Title]"
 description: "[SEO-optimized description, 150-160 characters]"
 date: YYYY-MM-DD
 tags: [relevant, tags, here]
+featured_image: "https://images.unsplash.com/photo-xxxxx?w=1200&h=600&fit=crop"
+image_credit: "Unsplash"
 ---
 
 ## Introduction

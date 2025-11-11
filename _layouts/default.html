@@ -9,35 +9,68 @@
   <link rel="canonical" href="{{ page.canonical_url }}">
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <nav>
-      <a href="{{ '/' | relative_url }}" class="logo">iFeeltech Guides</a>
-    </nav>
+    <div class="header-container">
+      <nav>
+        <a href="{{ '/' | relative_url }}" class="logo">
+          <span class="logo-icon">📚</span>
+          <span class="logo-text">iFeeltech Guides</span>
+        </a>
+        <a href="https://ifeeltech.com" class="nav-link">Main Site</a>
+      </nav>
+    </div>
   </header>
   
   <main class="content">
+    {% if page.featured_image %}
+    <div class="featured-image">
+      <img src="{{ page.featured_image }}" alt="{{ page.title }}" loading="lazy">
+      {% if page.image_credit %}
+      <p class="image-credit">Photo: {{ page.image_credit }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+    
     <article>
       <h1>{{ page.title }}</h1>
       {% if page.date %}
-      <p class="meta">
-        <em>{{ page.date | date: "%B %d, %Y" }}</em>
+      <div class="meta">
+        <span class="date">📅 {{ page.date | date: "%B %d, %Y" }}</span>
+        <span class="reading-time">⏱️ {{ content | number_of_words | divided_by: 200 }} min read</span>
         {% if page.tags %}
-        <span class="tags">
+        <div class="tags">
           {% for tag in page.tags %}
-          <span class="tag">{{ tag }}</span>
+          <span class="tag">#{{ tag }}</span>
           {% endfor %}
-        </span>
+        </div>
         {% endif %}
-      </p>
+      </div>
       {% endif %}
-      {{ content }}
+      
+      <div class="article-content">
+        {{ content }}
+      </div>
     </article>
+    
+    {% if page.layout == 'default' and page.date %}
+    <aside class="related-cta">
+      <h3>Need Expert Guidance?</h3>
+      <p>Our team at iFeeltech specializes in practical cybersecurity solutions for small and medium businesses.</p>
+      <a href="https://ifeeltech.com/contact" class="cta-button">Get in Touch</a>
+    </aside>
+    {% endif %}
   </main>
   
   <footer>
-    <p>© {{ "now" | date: "%Y" }} iFeeltech — <a href="https://ifeeltech.com">ifeeltech.com</a></p>
+    <div class="footer-container">
+      <p>© {{ "now" | date: "%Y" }} iFeeltech — <a href="https://ifeeltech.com">ifeeltech.com</a></p>
+      <p class="footer-tagline">Practical IT solutions for growing businesses</p>
+    </div>
   </footer>
 </body>
 </html>

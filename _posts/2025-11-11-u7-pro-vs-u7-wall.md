@@ -5,6 +5,8 @@ description: "Comparison for SMB installs with UniFi Wi-Fi 7"
 date: 2025-11-11
 canonical_url: "https://ifeeltech.com/unifi-u7-pro-comparison/"
 tags: [unifi, wifi7]
+featured_image: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=1200&h=600&fit=crop"
+image_credit: "Unsplash"
 ---
 
 ## Which AP Should You Choose?
