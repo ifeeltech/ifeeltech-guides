@@ -5,7 +5,7 @@ description: "Supporting guides and technical insights from ifeeltech"
 ---
 
 <div class="hero-section">
-  <h1>📚 iFeeltech Guides</h1>
+  <h1>iFeeltech Guides</h1>
   <p>Practical IT tutorials, cybersecurity insights, and setup walkthroughs for growing businesses. Clear, actionable guidance without the jargon.</p>
 </div>
 
@@ -21,8 +21,8 @@ description: "Supporting guides and technical insights from ifeeltech"
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p>{{ post.description }}</p>
       <div class="article-meta">
-        <span>📅 {{ post.date | date: "%b %d, %Y" }}</span>
-        <span>⏱️ {{ post.content | number_of_words | divided_by: 200 }} min read</span>
+        <span>{{ post.date | date: "%b %d, %Y" }}</span>
+        <span>{{ post.content | number_of_words | divided_by: 200 }} min read</span>
       </div>
     </div>
   </article>

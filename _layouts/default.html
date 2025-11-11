@@ -18,7 +18,6 @@
     <div class="header-container">
       <nav>
         <a href="{{ '/' | relative_url }}" class="logo">
-          <span class="logo-icon">📚</span>
           <span class="logo-text">iFeeltech Guides</span>
         </a>
         <a href="https://ifeeltech.com" class="nav-link">Main Site</a>
@@ -40,8 +39,8 @@
       <h1>{{ page.title }}</h1>
       {% if page.date %}
       <div class="meta">
-        <span class="date">📅 {{ page.date | date: "%B %d, %Y" }}</span>
-        <span class="reading-time">⏱️ {{ content | number_of_words | divided_by: 200 }} min read</span>
+        <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+        <span class="reading-time">{{ content | number_of_words | divided_by: 200 }} min read</span>
         {% if page.tags %}
         <div class="tags">
           {% for tag in page.tags %}
