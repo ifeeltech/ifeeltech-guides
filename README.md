@@ -32,14 +32,20 @@ ifeeltech-guides/
 
 ## ✍️ Creating Supporting Articles
 
-**Simple workflow:**
+**Two-Pass Quality Workflow:**
 1. Share the pillar article URL from ifeeltech.com
 2. AI analyzes and suggests 1-3 supporting topics
 3. Pick a topic
 4. AI writes the complete article (~1,000 words, journalistic tone)
-5. Review and publish
+5. **AI performs fact-checking pass** - Verifies pricing, statistics, technical accuracy
+6. **AI performs tone review pass** - Removes sensationalism, ensures helpfulness
+7. Review and publish
 
-See **[CONTENT_GUIDELINES.md](CONTENT_GUIDELINES.md)** for detailed writing standards and process.
+**Documentation:**
+- **[ARTICLE_WORKFLOW.md](ARTICLE_WORKFLOW.md)** - Complete step-by-step process with quality checks
+- **[CONTENT_GUIDELINES.md](CONTENT_GUIDELINES.md)** - Writing standards and tone guidelines
+- **[DESIGN_SYSTEM.md](DESIGN_SYSTEM.md)** - Visual design and component specs
+- **[SEO_SETUP.md](SEO_SETUP.md)** - SEO optimization and schema markup
 
 ## ✍️ Manual Post Creation
 
