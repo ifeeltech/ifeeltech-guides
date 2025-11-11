@@ -397,6 +397,14 @@ pre code {
   font-weight: 400;
 }
 
+footer {
+  background: #fafafa;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -404,12 +412,14 @@ pre code {
   text-align: center;
 }
 
-footer {
-  background: #f9fafb;
-  border-top: 1px solid #e5e7eb;
-  margin-top: 5rem;
-  font-size: 0.9rem;
-  color: #6b7280;
+footer p {
+  margin-bottom: 0.5rem;
+  max-width: none;
+}
+
+footer a {
+  color: #ff7441;
+  font-weight: 500;
 }
 
 .footer-tagline {
@@ -577,11 +587,11 @@ ul li:before {
 .related-cta {
   background: linear-gradient(135deg, #ff7441 0%, #ff8c5a 100%);
   color: white;
-  padding: 2.5rem;
-  border-radius: 12px;
-  margin: 4rem 0 3rem;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  margin: 5rem 0 5rem;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(255, 116, 65, 0.2);
+  box-shadow: 0 12px 32px rgba(255, 116, 65, 0.25);
 }
 
 .related-cta h3 {
@@ -621,8 +631,9 @@ ul li:before {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 0;
-  padding: 0 2rem 3rem;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+  max-width: 1200px;
 }
 
 .article-card {
@@ -737,17 +748,34 @@ ul li:before {
 
 .home-cta {
   text-align: center;
-  margin: 4rem 2rem 3rem;
-  padding: 2.5rem 2rem;
-  background: #f9fafb;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  margin: 5rem auto 5rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  border-radius: 16px;
+  border: 2px solid #e5e7eb;
+  max-width: 800px;
 }
 
 .home-cta p {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: #6b7280;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.7;
+}
+
+.home-cta .cta-button {
+  background: linear-gradient(135deg, #ff7441 0%, #ff8c5a 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.0625rem;
+  box-shadow: 0 4px 12px rgba(255, 116, 65, 0.25);
+}
+
+.home-cta .cta-button:hover {
+  background: linear-gradient(135deg, #ff8c5a 0%, #ff7441 100%);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 116, 65, 0.35);
 }
 
 /* Reading Progress Bar */
