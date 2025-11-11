@@ -30,7 +30,18 @@ ifeeltech-guides/
 └── index.md             # Homepage
 ```
 
-## ✍️ Adding New Posts
+## ✍️ Creating Supporting Articles
+
+**Simple workflow:**
+1. Share the pillar article URL from ifeeltech.com
+2. AI analyzes and suggests 1-3 supporting topics
+3. Pick a topic
+4. AI writes the complete article (~1,000 words, journalistic tone)
+5. Review and publish
+
+See **[CONTENT_GUIDELINES.md](CONTENT_GUIDELINES.md)** for detailed writing standards and process.
+
+## ✍️ Manual Post Creation
 
 Create a new file in `_posts/` with the format: `YYYY-MM-DD-title.md`
 
