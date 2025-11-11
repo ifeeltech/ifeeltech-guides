@@ -84,6 +84,11 @@ main.content {
   padding: 2rem 1.5rem;
 }
 
+main.home-content {
+  max-width: 1200px;
+  padding: 0;
+}
+
 h1 {
   font-size: 2.75rem;
   margin-bottom: 1rem;
@@ -396,7 +401,8 @@ ul li:before {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 3rem 0;
+  margin: 0;
+  padding: 0 2rem 3rem;
 }
 
 .article-card {
@@ -458,7 +464,7 @@ ul li:before {
   padding: 4rem 2rem;
   background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
   border-bottom: 1px solid #e5e7eb;
-  margin: -2rem -1.5rem 3rem;
+  margin: 0 0 3rem 0;
 }
 
 .hero-section h1 {
@@ -474,6 +480,21 @@ ul li:before {
   max-width: 650px;
   margin: 0 auto;
   line-height: 1.7;
+}
+
+.home-cta {
+  text-align: center;
+  margin: 4rem 2rem 3rem;
+  padding: 2.5rem 2rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.home-cta p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
 }
 
 /* Responsive */

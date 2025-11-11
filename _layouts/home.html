@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Professional IT Guides</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <nav>
+        <a href="{{ '/' | relative_url }}" class="logo">
+          <span class="logo-text">iFeeltech Guides</span>
+        </a>
+        <a href="https://ifeeltech.com" class="nav-link">Main Site</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="content home-content">
+    {{ content }}
+  </main>
+  
+  <footer>
+    <div class="footer-container">
+      <p>© {{ "now" | date: "%Y" }} iFeeltech — <a href="https://ifeeltech.com">ifeeltech.com</a></p>
+      <p class="footer-tagline">Practical IT solutions for growing businesses</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: home
 title: "iFeeltech Guides"
 description: "Supporting guides and technical insights from ifeeltech"
 ---
 
 <div class="hero-section">
-  <h1>iFeeltech Guides</h1>
-  <p>Practical IT tutorials, cybersecurity insights, and setup walkthroughs for growing businesses. Clear, actionable guidance without the jargon.</p>
+  <h1>Technical Guides for Growing Businesses</h1>
+  <p>Practical IT tutorials, cybersecurity insights, and setup walkthroughs. Clear, actionable guidance without the jargon.</p>
 </div>
 
 <div class="articles-grid">
@@ -29,7 +29,7 @@ description: "Supporting guides and technical insights from ifeeltech"
 {% endfor %}
 </div>
 
-<div style="text-align: center; margin-top: 4rem; padding: 2rem; background: #f9fafb; border-radius: 12px;">
-  <p style="font-size: 1.1rem; color: #6b7280; margin-bottom: 1rem;">Looking for comprehensive IT solutions?</p>
+<div class="home-cta">
+  <p>Looking for comprehensive IT solutions?</p>
   <a href="https://ifeeltech.com" class="cta-button">Visit ifeeltech.com</a>
 </div>
