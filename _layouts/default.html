@@ -68,11 +68,50 @@
   
   <header>
     <div class="header-container">
-      <nav>
-        <a href="{{ '/' | relative_url }}" class="logo">
-          <span class="logo-text">iFeeltech Guides</span>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="{{ '/' | relative_url }}" class="logo" aria-label="iFeeltech Guides Home">
+          <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+            <path d="M16 8L22 12V20L16 24L10 20V12L16 8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="16" r="3" fill="white"/>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ff7441"/>
+                <stop offset="1" stop-color="#ff8c5a"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="logo-text">iFeeltech <span class="logo-guides">Guides</span></span>
         </a>
-        <a href="https://ifeeltech.com" class="nav-link">Main Site</a>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-menu" id="nav-menu">
+          <a href="{{ '/' | relative_url }}" class="nav-link">All Guides</a>
+          <div class="nav-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Categories
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 4.5L6 7.5L9 4.5"/>
+              </svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="{{ '/' | relative_url }}?tag=security" class="dropdown-item">Security</a>
+              <a href="{{ '/' | relative_url }}?tag=surveillance" class="dropdown-item">Surveillance</a>
+              <a href="{{ '/' | relative_url }}?tag=encryption" class="dropdown-item">Encryption</a>
+              <a href="{{ '/' | relative_url }}?tag=compliance" class="dropdown-item">Compliance</a>
+            </div>
+          </div>
+          <a href="https://ifeeltech.com/about" class="nav-link">About</a>
+          <a href="https://ifeeltech.com/contact" class="nav-cta">Get Help</a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </nav>
     </div>
   </header>
@@ -325,8 +364,45 @@
       }
     }
     
+    // Mobile Menu Toggle
+    function initMobileMenu() {
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      
+      if (!mobileToggle || !navMenu) return;
+      
+      mobileToggle.addEventListener('click', function() {
+        const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!mobileToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          navMenu.classList.remove('active');
+        }
+      });
+    }
+    
+    // Dropdown Toggle (for mobile)
+    function initDropdowns() {
+      const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !isExpanded);
+        });
+      });
+    }
+    
     // Initialize on page load
     document.addEventListener('DOMContentLoaded', function() {
+      initMobileMenu();
+      initDropdowns();
       generateTableOfContents();
       initTocToggle();
       updateReadingProgress();
