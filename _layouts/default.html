@@ -13,6 +13,12 @@
   <!-- RSS Feed Auto-Discovery -->
   {% feed_meta %}
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.svg' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#ff7441">
+  
   {% if page.canonical_url %}
   <link rel="canonical" href="{{ page.canonical_url }}">
   {% endif %}

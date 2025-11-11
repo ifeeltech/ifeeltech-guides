@@ -1,0 +1,17 @@
+{
+  "name": "iFeeltech Guides",
+  "short_name": "iFeeltech",
+  "description": "Practical IT guides and tutorials for small business",
+  "start_url": "/ifeeltech-guides/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff7441",
+  "icons": [
+    {
+      "src": "/ifeeltech-guides/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

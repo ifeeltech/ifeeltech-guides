@@ -1,0 +1,11 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="40" fill="url(#apple-gradient)"/>
+  <path d="M90 45L123.75 67.5V112.5L90 135L56.25 112.5V67.5L90 45Z" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="90" cy="90" r="18" fill="white"/>
+  <defs>
+    <linearGradient id="apple-gradient" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff7441"/>
+      <stop offset="1" stop-color="#ff8c5a"/>
+    </linearGradient>
+  </defs>
+</svg>
